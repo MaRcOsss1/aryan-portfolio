@@ -29,3 +29,9 @@ jobs:
         with:
           branch: gh-pages
           folder: dist
+
+      - name: Install dependencies
+        run: npm ci                      # uses package.json
+        
+      - name: Build
+        run: npm run build              # makes the dist/ folder
